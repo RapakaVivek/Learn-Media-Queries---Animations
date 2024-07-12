@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .a {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .pp {
+            display: none;
+            padding-top: 10px;
+        }
+
+        
+        @media screen and (max-width: 600px) {
+            .a {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            .btn {
+                padding: 8px 12px;
+            }
+        }
+
+        
+        @keyframes rotateIcon {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        
+        .rotate {
+            animation: rotateIcon 0.5s linear forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        
+        <h1>How many photos will receive?<button class="btn" id="toggleButton"><i class="fa-solid fa-plus"></i></button></h1>
+        
+        <p class="pp" id="paragraph">dxgasagduiashfcioahcioashjclksncklncadhciosahfoishcoiahcniadcxhnacjnmchnama</p>
+    </div>
+
+    
+    <script>
+        var paragraph = document.getElementById("paragraph");
+        var toggleButton = document.getElementById("toggleButton");
+
+        toggleButton.addEventListener("click", function() {
+            if (paragraph.style.display === "none") {
+                paragraph.style.display = "block";
+                toggleButton.innerHTML = '<i class="fa-solid fa-minus"></i>';
+                toggleButton.classList.add("rotate");
+            } else {
+                paragraph.style.display = "none";
+                toggleButton.innerHTML = '<i class="fa-solid fa-plus"></i>';
+                toggleButton.classList.remove("rotate");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Keyframes Animation with Media Queries</title>
+<style>
+  
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+  @keyframes move {
+    0% { transform: translate(-50%, -50%); }
+    50% { transform: translate(-50%, -100px); }
+    100% { transform: translate(-50%, -50%); }
+  }
+
+  
+  .box {
+    animation: move 4s infinite;
+  }
+
+
+  @media (min-width: 768px) {
+    .box {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  
+  @media (min-width: 1200px) {
+    .box {
+      width: 200px;
+      height: 200px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

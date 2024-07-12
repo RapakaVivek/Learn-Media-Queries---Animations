@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Keyframes Animation Example</title>
+<style>
+    
+    @keyframes myAnimation {
+        
+        0% {
+            background-color: red;
+            transform: scale(1);
+        }
+
+        
+        50% {
+            background-color: yellow;
+            transform: scale(1.2);
+        }
+
+    
+        100% {
+            background-color: green;
+            transform: scale(1);
+        }
+    }
+
+    .animated {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        
+        animation: myAnimation 3s infinite;
+    
+        border: 2px solid black;
+        margin: 50px auto;
+    }
+</style>
+</head>
+<body>
+    
+    <div class="animated"></div>
+</body>
+</html>
